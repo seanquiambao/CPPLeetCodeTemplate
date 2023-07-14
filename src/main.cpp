@@ -96,6 +96,7 @@ void PUSH_ELEMENTS(vector<char>& arr, string& t) {
 
 template <typename T> void READ(T& x) {
     cin >> x;
+    cin.ignore();
 }
 
 template <typename T> void READLINE(T& x) {
@@ -141,7 +142,6 @@ int main() {
     int cases;
 
     READ(cases);
-    cin.ignore();
 
     for(int i = 0; i < cases; ++i) {
         WRITE("Case #", i+1, ": ");
