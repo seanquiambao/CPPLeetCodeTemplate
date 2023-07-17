@@ -12,8 +12,11 @@ struct TreeNode {
     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
 };
 
-class TreeFunction { 
-    void Treeify(TreeNode*& root, vector<int> arr);
+class TreeFunction {
+    public:
+        void POPULATE_ARRAYTREE(vector<string>& arr, string input);
+        void PUSH_ELEMENTS_ARRAYTREE(vector<string>& arr, string t);
+        TreeNode* Treeify(vector<string> arr, int i, int n);
 };
 
 #endif

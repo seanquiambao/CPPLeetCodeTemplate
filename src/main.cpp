@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+#include "../lib/TreeFunctions.h"
 using namespace std;
 
 template<typename A> void WRITE(A x) {
@@ -139,12 +140,19 @@ int main() {
     cin.tie(0);
 
     Solution sol;
+    TreeFunction tree;
     int cases;
+    string input;
+    vector<string> arr;
 
     READ(cases);
 
     for(int i = 0; i < cases; ++i) {
+        arr.clear();
+        READLINE(input);
+        tree.POPULATE_ARRAYTREE(arr, input);
         WRITE("Case #", i+1, ": ");
+        PRINT_ARRAY(arr);
         // Collect inputs in this for loop.
         // PRINT(sol.functionName(...inputs));
     }
