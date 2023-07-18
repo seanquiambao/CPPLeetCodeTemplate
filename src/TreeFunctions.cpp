@@ -32,6 +32,30 @@ void TreeFunction::POPULATE_ARRAYTREE(vector<TreeNode *> &arr, string input)
     this->PUSH_ELEMENTS_ARRAYTREE(arr, input);
 }
 
+void TreeFunction::DELETE_TREE(TreeNode *tree)
+{
+    if (!tree)
+    {
+        return;
+    }
+    DELETE_TREE(tree->left);
+    DELETE_TREE(tree->right);
+    delete tree;
+}
+
+void TreeFunction::DELETE_ELEMENTS(vector<TreeNode *> &arr)
+{
+    for (auto nodes : arr)
+    {
+        if (nodes)
+        {
+            delete nodes;
+        }
+    }
+
+    arr.clear();
+}
+
 TreeNode *TreeFunction::Treeify(vector<TreeNode *> arr, int i, int n)
 {
     if (arr.empty() || !arr[0])

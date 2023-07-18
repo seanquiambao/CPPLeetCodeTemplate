@@ -188,22 +188,12 @@ int main()
     Solution sol;
     TreeFunction tree;
     int cases;
-    string input;
-    vector<TreeNode *> arr;
-    TreeNode *woah = nullptr;
 
     READ(cases);
 
     for (int i = 0; i < cases; ++i)
     {
-        arr.clear();
-        READLINE(input);
-        tree.POPULATE_ARRAYTREE(arr, input);
         WRITE("Case #", i + 1, ": ");
-        woah = tree.Treeify(arr, 0, arr.size());
-
-        // Collect inputs in this for loop.
-        // PRINT(sol.functionName(...inputs));
     }
 
     return 0;
