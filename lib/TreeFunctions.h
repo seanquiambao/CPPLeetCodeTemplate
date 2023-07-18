@@ -3,7 +3,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-struct TreeNode { 
+struct TreeNode
+{
     int val;
     TreeNode *left;
     TreeNode *right;
@@ -12,11 +13,12 @@ struct TreeNode {
     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
 };
 
-class TreeFunction {
-    public:
-        void POPULATE_ARRAYTREE(vector<string>& arr, string input);
-        void PUSH_ELEMENTS_ARRAYTREE(vector<string>& arr, string t);
-        TreeNode* Treeify(vector<string> arr, int i, int n);
+class TreeFunction
+{
+public:
+    void POPULATE_ARRAYTREE(vector<TreeNode *> &arr, string input);
+    void PUSH_ELEMENTS_ARRAYTREE(vector<TreeNode *> &arr, string t);
+    TreeNode *Treeify(vector<TreeNode *> arr, int i, int n);
 };
 
 #endif
