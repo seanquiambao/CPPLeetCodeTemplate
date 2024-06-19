@@ -56,7 +56,7 @@ void TreeFunction::DELETE_ELEMENTS(vector<TreeNode *> &arr)
     arr.clear();
 }
 
-TreeNode *TreeFunction::Treeify(vector<TreeNode *> arr, int i, int n)
+TreeNode *TreeFunction::TREEIFY(vector<TreeNode *> arr, int i, int n)
 {
     if (arr.empty() || !arr[0])
     {
